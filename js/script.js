@@ -21,17 +21,17 @@ const player2 = {
 };
 
 function createPlayer(player, objPlayer) {
-    const player1Div = document.createElement('div'),
+    const playerDiv = document.createElement('div'),
           progressbar = document.createElement('div'),
           character = document.createElement('div'),
           life = document.createElement('div'),
           nameDiv = document.createElement('div'),
           img = document.createElement('img');
 
-    player1Div.classList.add(player);
-    player1Div.appendChild(progressbar);
+    playerDiv.classList.add(player);
+    playerDiv.appendChild(progressbar);
     progressbar.classList.add('progressbar');
-    player1Div.appendChild(character);
+    playerDiv.appendChild(character);
     character.classList.add('character');
     progressbar.appendChild(life);
     life.classList.add('life');
@@ -41,7 +41,7 @@ function createPlayer(player, objPlayer) {
     nameDiv.innerText = objPlayer.name;
     character.appendChild(img);
     img.src=objPlayer.img;
-    document.getElementsByClassName('arenas')[0].appendChild(player1Div);
+    document.getElementsByClassName('arenas')[0].appendChild(playerDiv);
 }
 
 createPlayer('player1', player1);
