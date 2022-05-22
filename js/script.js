@@ -54,6 +54,15 @@ function createPlayer(objPlayer) {
     return $player;
 }
 
+function whoWon() {
+    if (player1.hp <= 0) {
+        $arenas.appendChild(playerLose(player2.name));
+    } else {
+        $arenas.appendChild(playerLose(player1.name));
+    }
+    $randomButton.disabled = true;
+}
+
 function changeHP(player){
     const $playerLife = document.querySelector('.player' + player.player + ' .life');
     
@@ -66,16 +75,9 @@ function changeHP(player){
     if (player.hp - $kick > 0) {
         player.hp -= $kick;
     } else {
-        function whoWon() {
-            if (player1.hp > 0) {
-                $arenas.appendChild(playerLose(player1.name));
-            } else {
-                $$arenas.appendChild(playerLose(player2.name));
-            }
-        }
         whoWon();
         player.hp = 0;
-        $randomButton.disabled = true;
+        
     }
     
     console.log('1. ' + player1.hp + ' 2. ' + player2.hp);
