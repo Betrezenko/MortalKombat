@@ -9,10 +9,10 @@ const player1 = {
     hp: 100,
     img: 'http://reactmarathon-api.herokuapp.com/assets/scorpion.gif',
     weapon: ['bow', 'sword', 'staff', 'dagger'],
-    attack: attack,
-    changeHP: changeHP,
-    elHP: elHP,
-    renderHP: renderHP
+    attack,
+    changeHP,
+    elHP,
+    renderHP
 };
 
 const player2 = {
@@ -21,10 +21,10 @@ const player2 = {
     hp: 100,
     img: 'http://reactmarathon-api.herokuapp.com/assets/sonya.gif',
     weapon: ['bow', 'sword', 'staff', 'dagger'],
-    attack: attack,
-    changeHP: changeHP,
-    elHP: elHP,
-    renderHP: renderHP
+    attack,
+    changeHP,
+    elHP,
+    renderHP
 };
 
 function attack() {
