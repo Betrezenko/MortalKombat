@@ -168,6 +168,9 @@ $formFight.addEventListener('submit', function(e){
     }
     console.log('en: ', enemy);
     console.log('att: ', attack);
+
+    player1.changeHP(enemy);
     player1.renderHP();
+    player2.changeHP(getRandom(20));
     player2.renderHP();
 });
